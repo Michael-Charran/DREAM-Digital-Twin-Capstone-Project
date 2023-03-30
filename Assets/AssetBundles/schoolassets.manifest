@@ -1,0 +1,197 @@
+ManifestFileVersion: 0
+CRC: 3589964789
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 84f0691c3f0b513aa1a27e683f6a4d9f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 74039e6d04f98335c62648ca00a1df8a
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.XR.Interaction.Toolkit
+  ClassName: UnityEngine.XR.Interaction.Toolkit.ActivateEvent
+- AssemblyName: Unity.XR.Interaction.Toolkit
+  ClassName: UnityEngine.XR.Interaction.Toolkit.DeactivateEvent
+- AssemblyName: Unity.XR.Interaction.Toolkit
+  ClassName: UnityEngine.XR.Interaction.Toolkit.HoverEnterEvent
+- AssemblyName: Unity.XR.Interaction.Toolkit
+  ClassName: UnityEngine.XR.Interaction.Toolkit.HoverExitEvent
+- AssemblyName: Unity.XR.Interaction.Toolkit
+  ClassName: UnityEngine.XR.Interaction.Toolkit.InteractionLayerMask
+- AssemblyName: Unity.XR.Interaction.Toolkit
+  ClassName: UnityEngine.XR.Interaction.Toolkit.SelectEnterEvent
+- AssemblyName: Unity.XR.Interaction.Toolkit
+  ClassName: UnityEngine.XR.Interaction.Toolkit.SelectExitEvent
+- AssemblyName: Unity.XR.Interaction.Toolkit
+  ClassName: UnityEngine.XR.Interaction.Toolkit.TeleportingEvent
+- AssemblyName: Unity.XR.Interaction.Toolkit
+  ClassName: UnityEngine.XR.Interaction.Toolkit.XRInteractableEvent
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+Assets:
+- Assets/school/Prefabs/props/board2_1.prefab
+- Assets/school/props/locker_5.fbx
+- Assets/school/Prefabs/props/chair.prefab
+- Assets/school/Prefabs/props/a laptop.prefab
+- Assets/school/props/button.fbx
+- Assets/school/Prefabs/props/locker2.prefab
+- Assets/school/Prefabs/props/computer3.prefab
+- Assets/school/Prefabs/props/board.prefab
+- Assets/school/props/book1.fbx
+- Assets/school/props/book9.fbx
+- Assets/school/Prefabs/props/locker_4.prefab
+- Assets/school/Prefabs/props/book16.prefab
+- Assets/school/Prefabs/props/book13.prefab
+- Assets/school/props/board2_2.fbx
+- Assets/school/props/showcase.fbx
+- Assets/school/Prefabs/props/book5.prefab
+- Assets/school/Prefabs/props/book6.prefab
+- Assets/school/props/tray.fbx
+- Assets/school/props/computer.fbx
+- Assets/school/Prefabs/props/book15.prefab
+- Assets/school/Prefabs/props/sheet3.prefab
+- Assets/school/props/wall4.fbx
+- Assets/school/props/wall2.fbx
+- Assets/school/road/doroga.fbx
+- Assets/school/Prefabs/props/board2_2 (1).prefab
+- Assets/school/props/bus.fbx
+- Assets/school/props/book13.fbx
+- Assets/school/props/board2.fbx
+- Assets/school/Prefabs/props/chair1.prefab
+- Assets/school/Prefabs/props/locker_1.prefab
+- Assets/school/Prefabs/props/tray.prefab
+- Assets/school/props/sheet1.fbx
+- Assets/school/props/fire.fbx
+- Assets/school/props/sheet4.fbx
+- Assets/school/props/sheet2.fbx
+- Assets/school/Prefabs/props/rack.prefab
+- Assets/school/props/wall4 (2).fbx
+- Assets/school/Prefabs/props/board2_2 1.prefab
+- Assets/school/Prefabs/props/locker.prefab
+- Assets/school/props/jalousie.fbx
+- Assets/school/Prefabs/props/book2.prefab
+- Assets/school/Prefabs/props/computer1.prefab
+- Assets/school/props/chair.fbx
+- Assets/school/props/locker.fbx
+- Assets/school/Prefabs/props/wall4 (1).prefab
+- Assets/school/props/locker_2.fbx
+- Assets/school/Prefabs/road/floor1.prefab
+- Assets/school/props/book4.fbx
+- Assets/school/Prefabs/props/sheet.prefab
+- Assets/school/props/wall4 (1).fbx
+- Assets/school/Prefabs/props/locker_2.prefab
+- Assets/school/Prefabs/props/book14.prefab
+- Assets/school/props/table2.fbx
+- Assets/school/props/book16.fbx
+- Assets/school/props/book8.fbx
+- Assets/school/props/book7.fbx
+- Assets/school/props/locker_1.fbx
+- Assets/school/props/rack1.fbx
+- Assets/school/Prefabs/props/button.prefab
+- Assets/school/props/book10.fbx
+- Assets/school/props/book14.fbx
+- Assets/school/props/locker2.fbx
+- Assets/school/DemoScene/CheatCode.prefab
+- Assets/school/props/a laptop.fbx
+- Assets/school/Prefabs/props/book1.prefab
+- Assets/school/Prefabs/props/locker_5.prefab
+- Assets/school/Prefabs/props/fire.prefab
+- Assets/school/Prefabs/props/wall.prefab
+- Assets/school/Prefabs/props/rack1.prefab
+- Assets/school/Prefabs/props/wall4 (2).prefab
+- Assets/school/Prefabs/props/board2.prefab
+- Assets/school/props/a door.fbx
+- Assets/school/Prefabs/props/table2.prefab
+- Assets/school/Prefabs/props/wall4.prefab
+- Assets/school/props/book6.fbx
+- Assets/school/props/board.fbx
+- Assets/school/Prefabs/props/jalousie.prefab
+- "Assets/school/Prefabs/road/doroga \u2014 krest.prefab"
+- Assets/school/Prefabs/props/showcase.prefab
+- Assets/school/Prefabs/props/speaker.prefab
+- Assets/school/props/locker1.fbx
+- Assets/school/Prefabs/props/locker1.prefab
+- Assets/school/Prefabs/props/book7.prefab
+- Assets/school/props/table3.fbx
+- Assets/school/props/sheet3.fbx
+- Assets/school/Prefabs/props/locker_3.prefab
+- Assets/school/props/book.fbx
+- Assets/school/Prefabs/props/projector.prefab
+- Assets/school/props/speaker.fbx
+- Assets/school/props/book15.fbx
+- Assets/school/Prefabs/props/sheet1.prefab
+- Assets/school/road/floor.fbx
+- Assets/school/Prefabs/props/book9.prefab
+- Assets/school/Prefabs/props/table1.prefab
+- Assets/school/Prefabs/props/book.prefab
+- Assets/school/Prefabs/props/a door.prefab
+- Assets/school/Prefabs/props/sheet2.prefab
+- Assets/school/Prefabs/props/book12.prefab
+- Assets/school/Prefabs/props/book3.prefab
+- Assets/school/props/a door1.fbx
+- Assets/school/props/locker_4.fbx
+- Assets/school/props/computer3.fbx
+- Assets/school/Prefabs/road/doroga.prefab
+- Assets/school/props/wall001.fbx
+- Assets/school/props/board1.fbx
+- Assets/school/Prefabs/props/table3.prefab
+- Assets/school/props/board2_1.fbx
+- Assets/school/props/computer2.fbx
+- Assets/school/props/book11.fbx
+- Assets/school/Prefabs/props/board1.prefab
+- Assets/school/props/book12.fbx
+- Assets/school/props/fire1.fbx
+- Assets/school/Prefabs/props/sheet4.prefab
+- Assets/school/Prefabs/props/computer2.prefab
+- Assets/school/Prefabs/props/fire1.prefab
+- Assets/school/Prefabs/props/board2_2.prefab
+- Assets/school/Prefabs/props/bus.prefab
+- Assets/school/road/floor1.fbx
+- Assets/school/props/book3.fbx
+- Assets/school/props/book5.fbx
+- Assets/school/props/computer1.fbx
+- Assets/school/Prefabs/props/wall2.prefab
+- Assets/school/props/book2.fbx
+- Assets/school/Prefabs/props/book11.prefab
+- Assets/school/Prefabs/props/a door1.prefab
+- Assets/school/props/sheet.fbx
+- Assets/school/props/locker_3.fbx
+- Assets/school/props/chair1.fbx
+- Assets/school/props/projector.fbx
+- Assets/school/Prefabs/props/Floor.prefab
+- Assets/school/Prefabs/props/board2_1 1.prefab
+- Assets/school/Prefabs/props/book8.prefab
+- Assets/school/props/table1.fbx
+- Assets/school/Prefabs/props/wall001.prefab
+- Assets/school/Prefabs/road/floor.prefab
+- Assets/school/Prefabs/props/book10.prefab
+- Assets/school/props/rack.fbx
+- Assets/school/props/wall.fbx
+- Assets/school/Prefabs/props/book4.prefab
+- Assets/school/Prefabs/props/computer.prefab
+- "Assets/school/road/doroga \u2014 krest.fbx"
+Dependencies: []
