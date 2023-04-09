@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3589964789
+CRC: 2416402367
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 84f0691c3f0b513aa1a27e683f6a4d9f
+    Hash: 1f67fb5076d9b6dc1a29ac3ae9a1b5e3
   TypeTreeHash:
     serializedVersion: 2
     Hash: 74039e6d04f98335c62648ca00a1df8a
@@ -98,8 +98,8 @@ Assets:
 - Assets/school/props/chair.fbx
 - Assets/school/props/locker.fbx
 - Assets/school/Prefabs/props/wall4 (1).prefab
-- Assets/school/props/locker_2.fbx
 - Assets/school/Prefabs/road/floor1.prefab
+- Assets/school/props/locker_2.fbx
 - Assets/school/props/book4.fbx
 - Assets/school/Prefabs/props/sheet.prefab
 - Assets/school/props/wall4 (1).fbx
@@ -127,10 +127,10 @@ Assets:
 - Assets/school/props/a door.fbx
 - Assets/school/Prefabs/props/table2.prefab
 - Assets/school/Prefabs/props/wall4.prefab
-- Assets/school/props/book6.fbx
+- "Assets/school/Prefabs/road/doroga \u2014 krest.prefab"
 - Assets/school/props/board.fbx
 - Assets/school/Prefabs/props/jalousie.prefab
-- "Assets/school/Prefabs/road/doroga \u2014 krest.prefab"
+- Assets/school/props/book6.fbx
 - Assets/school/Prefabs/props/showcase.prefab
 - Assets/school/Prefabs/props/speaker.prefab
 - Assets/school/props/locker1.fbx

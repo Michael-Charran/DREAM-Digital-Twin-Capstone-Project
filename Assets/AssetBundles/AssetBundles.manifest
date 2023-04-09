@@ -1,7 +1,7 @@
 ManifestFileVersion: 0
-CRC: 442154552
+CRC: 2179609719
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: schoolassets
+      Name: roomassets/schoolassets
       Dependencies: {}

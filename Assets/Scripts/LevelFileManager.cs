@@ -15,13 +15,13 @@ public class LevelFileManager : MonoBehaviour
     private string filePath;
     private bool Loaded;
 
-  
+
     // Start is called before the first frame update
     void Start()
     {
         //Save the current Scene to a json file Named after the current SceneName.
         //#TODO Ideally will only be called with user input name in Level Editor, Will need changed.
-       //  saveToFile(SceneManager.GetActiveScene().name);
+          //saveToFile(SceneManager.GetActiveScene().name);
         loadFromFile("SampleScene");
         //Set Load to False
         //Loaded = false;
@@ -56,7 +56,7 @@ public class LevelFileManager : MonoBehaviour
         assetPositions = new Vector3[assetsToSave.Length];
         assetBundleNames = new string[assetsToSave.Length];
 
-        for(int j=0; j < assetsToSave.Length; j++)
+        for (int j = 0; j < assetsToSave.Length; j++)
         {
             assetNames[j] = assetsToSave[j].name;
             assetPositions[j] = assetsToSave[j].transform.position;
@@ -64,7 +64,7 @@ public class LevelFileManager : MonoBehaviour
             assetBundleNames[j] = "schoolassets";
         }
     }
-    
+
     //Saves the current level to a JSON file
     public void saveToFile(string fileName)
     {
@@ -75,7 +75,7 @@ public class LevelFileManager : MonoBehaviour
         levelContent.setAssetNames(assetNames);
         levelContent.setAssetPositions(assetPositions);
         string jsonContent = JsonUtility.ToJson(levelContent);// Convert to Json String.
-        
+
         filePath = Application.persistentDataPath + Path.AltDirectorySeparatorChar + fileName + ".json";//Create JSON Filepath off of provided fileName #TODO Check exact save location
         Debug.Log("Saving Data at " + filePath);
 
@@ -91,7 +91,7 @@ public class LevelFileManager : MonoBehaviour
         //Load the desired data file
         filePath = Application.persistentDataPath + Path.AltDirectorySeparatorChar + fileName + ".json";//Create JSON Filepath off of provided fileName #TODO Check exact save location
         Debug.Log("Loading Data at " + filePath);
-        StreamReader reader = new StreamReader(filePath); 
+        StreamReader reader = new StreamReader(filePath);
         string jsonContent = reader.ReadToEnd();
         reader.Close();
         levelData levelContent = JsonUtility.FromJson<levelData>(jsonContent);// extract levelData from json
@@ -104,30 +104,46 @@ public class LevelFileManager : MonoBehaviour
     private void populateScene(levelData level)
     {
         //Clear the scene just in case
-        foreach(GameObject roomObject in GameObject.FindGameObjectsWithTag(GameObjectTag))
+        foreach (GameObject roomObject in GameObject.FindGameObjectsWithTag(GameObjectTag))
         {
             Destroy(roomObject);
         }
 
         //Create objects in the room
         List<AssetBundle> activeBundles = new List<AssetBundle>(); // Loaded Bundle reference list
+        //Loop to Load All AssetBundles listed in the scene file
         for (int i = 0; i < level.getAssetBundleNames().Length; i++)
         {
-            foreach (AssetBundle loadedBundle in AssetBundle.GetAllLoadedAssetBundles()) // Prevent the same asset bundle from being loaded more than one
+            if (i !=0) 
             {
-                if (!activeBundles.Contains(loadedBundle) && loadedBundle.name != level.getAssetBundleNames()[i]) // Will only load the bundle if it is not already loaded and the level data bundlename does not match.
+                Debug.Log("All Loaded AssetBundles != null");
+                foreach (AssetBundle loadedBundle in AssetBundle.GetAllLoadedAssetBundles()) // Prevent the same asset bundle from being loaded more than one
                 {
-                    activeBundles.Add(AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, level.getAssetBundleNames()[i])));
-                    
-                }    
-            }
-
-            for (int j = 0; j < activeBundles.Count; j++) {
-                if (activeBundles[j].name == level.getAssetBundleNames()[i]) {
-                    Instantiate(activeBundles[j].LoadAsset<GameObject>(level.getAssetNames()[i]), level.getAssetPositions()[i], Quaternion.identity);
+                    if (!activeBundles.Contains(loadedBundle) && loadedBundle.name != level.getAssetBundleNames()[i]) // Will only store the bundle in the list if it is not already loaded and the level data bundlename does not match.
+                    {
+                        activeBundles.Add(AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "..", "AssetBundles", "roomassets", level.getAssetBundleNames()[i])));
+                        Debug.Log("Additional Asset Bundle Load: " + Path.Combine(Application.streamingAssetsPath, "..", "AssetBundles", "roomassets", level.getAssetBundleNames()[i]));
+                    }
                 }
             }
-            
+            else
+            {
+                activeBundles.Add(AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "..", "AssetBundles", "roomassets", level.getAssetBundleNames()[i])));
+                Debug.Log("Inital Asset Bundle Load: " + Path.Combine(Application.streamingAssetsPath, "..", "AssetBundles", "roomassets", level.getAssetBundleNames()[i]));
+            }
+
+        }
+        //Start Instantiating objects
+        for (int i = 0; i < level.getAssetBundleNames().Length; i++)
+        {
+            for (int j = 0; j < activeBundles.Count; j++)
+            {
+                    Instantiate(activeBundles[j].LoadAsset<GameObject>(level.getAssetNames()[i]), level.getAssetPositions()[i], Quaternion.identity); //Instantiate Call
+                    Debug.Log("instantiate Called For: " + level.getAssetNames()[i]);
+                
+            }
+
+
         }
     }
 }
