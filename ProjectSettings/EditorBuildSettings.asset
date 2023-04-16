@@ -4,7 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 50883d081f5e0e34e97de3da0c6b1b03
+  - enabled: 1
+    path: Assets/Scenes/Phy.unity
+    guid: a6d9472ea6538524a9abcfe32e71f409
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Hub.unity
+    guid: 49e2e7ab7aefb0241a76ebfee08cbea1
+  - enabled: 1
+    path: Assets/Scenes/Chem.unity
+    guid: 4e5309969e9018d4a8dcaab729e848e5
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fb7bc3695243cb442b71a286d0a371ec, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 89c8b939b16f9754da8652b2abe4da85, type: 2}
