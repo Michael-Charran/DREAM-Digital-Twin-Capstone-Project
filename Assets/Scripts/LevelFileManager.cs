@@ -12,6 +12,7 @@ public class LevelFileManager : MonoBehaviour
     [SerializeField] private string[] assetNames;
     [SerializeField] private Vector3[] assetPositions;
     [SerializeField] private string[] assetBundleNames;
+    [SerializeField] private Quaternion[] assetRotations;
     private string filePath;
     private bool Loaded;
 
@@ -21,7 +22,7 @@ public class LevelFileManager : MonoBehaviour
     {
         //Save the current Scene to a json file Named after the current SceneName.
         //#TODO Ideally will only be called with user input name in Level Editor, Will need changed.
-          //saveToFile(SceneManager.GetActiveScene().name);
+        // saveToFile(SceneManager.GetActiveScene().name);
         loadFromFile("SampleScene");
         //Set Load to False
         //Loaded = false;
@@ -54,6 +55,7 @@ public class LevelFileManager : MonoBehaviour
         assetsToSave = GameObject.FindGameObjectsWithTag(GameObjectTag);
         assetNames = new string[assetsToSave.Length];
         assetPositions = new Vector3[assetsToSave.Length];
+        assetRotations = new Quaternion[assetsToSave.Length];
         assetBundleNames = new string[assetsToSave.Length];
 
         for (int j = 0; j < assetsToSave.Length; j++)
@@ -61,6 +63,7 @@ public class LevelFileManager : MonoBehaviour
             assetNames[j] = assetsToSave[j].name;
             assetPositions[j] = assetsToSave[j].transform.position;
             //  assetBundleNames[j] = UnityEditor.AssetDatabase.GetAssetPath(assetsToSave[j]);
+            assetRotations[j] = assetsToSave[j].transform.rotation;
             assetBundleNames[j] = "schoolassets";
         }
     }
@@ -74,6 +77,7 @@ public class LevelFileManager : MonoBehaviour
         levelContent.setAssetBundleNames(assetBundleNames);
         levelContent.setAssetNames(assetNames);
         levelContent.setAssetPositions(assetPositions);
+        levelContent.setAssetRotations(assetRotations);
         string jsonContent = JsonUtility.ToJson(levelContent);// Convert to Json String.
 
         filePath = Application.persistentDataPath + Path.AltDirectorySeparatorChar + fileName + ".json";//Create JSON Filepath off of provided fileName #TODO Check exact save location
@@ -138,8 +142,22 @@ public class LevelFileManager : MonoBehaviour
         {
             for (int j = 0; j < activeBundles.Count; j++)
             {
-                    Instantiate(activeBundles[j].LoadAsset<GameObject>(level.getAssetNames()[i]), level.getAssetPositions()[i], Quaternion.identity); //Instantiate Call
-                    Debug.Log("instantiate Called For: " + level.getAssetNames()[i]);
+                if ("roomassets/" + level.getAssetBundleNames()[i] == activeBundles[j].name)
+                {
+                    try
+                    {
+                        Instantiate(activeBundles[j].LoadAsset<GameObject>(level.getAssetNames()[i]), level.getAssetPositions()[i], level.getAssetRotations()[i]); //Instantiate Call
+                        Debug.Log("instantiate Called For: " + level.getAssetNames()[i]);
+                    }
+                    catch
+                    {
+                        Debug.Log("Load of object failed: " + level.getAssetNames()[i]);
+                    }
+                }
+                else
+                {
+                    Debug.Log(level.getAssetNames()[i] + " not contained in " + activeBundles[j].name);
+                }
                 
             }
 
@@ -159,6 +177,8 @@ public class levelData
     private string[] assetNames;
     [SerializeField]
     private Vector3[] assetPositions;
+    [SerializeField]
+    private Quaternion[] assetRotations;
 
     //set AssetBundleNames Array assets
     public void setAssetBundleNames(string[] bundleNamesToSet)
@@ -189,6 +209,16 @@ public class levelData
     public Vector3[] getAssetPositions()
     {
         return assetPositions;
+    }
+    //set assetRotations
+    public void setAssetRotations(Quaternion[] rotToSet)
+    {
+        assetRotations = rotToSet;
+    }
+    //get assetRotations
+    public Quaternion[] getAssetRotations()
+    {
+        return assetRotations;
     }
 }
 
