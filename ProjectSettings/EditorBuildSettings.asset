@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 50883d081f5e0e34e97de3da0c6b1b03
   - enabled: 1
-    path: Assets/Scenes/Phy.unity
+    path: Assets/Scenes/Physics lab.unity
     guid: a6d9472ea6538524a9abcfe32e71f409
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity

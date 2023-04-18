@@ -23,7 +23,7 @@ public class LevelFileManager : MonoBehaviour
         //Save the current Scene to a json file Named after the current SceneName.
         //#TODO Ideally will only be called with user input name in Level Editor, Will need changed.
         // saveToFile(SceneManager.GetActiveScene().name);
-        loadFromFile("SampleScene");
+           loadFromFile("Phy");
         //Set Load to False
         //Loaded = false;
     }
@@ -60,7 +60,23 @@ public class LevelFileManager : MonoBehaviour
 
         for (int j = 0; j < assetsToSave.Length; j++)
         {
-            assetNames[j] = assetsToSave[j].name;
+            string objectName = "";
+            foreach (char letter in assetsToSave[j].name){
+                
+                if(letter != '(')
+                {
+                    objectName = objectName + letter;
+                }
+                else
+                {
+                   break;
+                }
+
+            }
+            if(objectName.EndsWith(' ')){
+            objectName = objectName.Substring(0, objectName.Length - 1);
+        }
+            assetNames[j] = objectName;
             assetPositions[j] = assetsToSave[j].transform.position;
             //  assetBundleNames[j] = UnityEditor.AssetDatabase.GetAssetPath(assetsToSave[j]);
             assetRotations[j] = assetsToSave[j].transform.rotation;
@@ -151,7 +167,7 @@ public class LevelFileManager : MonoBehaviour
                     }
                     catch
                     {
-                        Debug.Log("Load of object failed: " + level.getAssetNames()[i]);
+                        Debug.Log("Load of object failed: " + level.getAssetNames()[i] + "X");
                     }
                 }
                 else
