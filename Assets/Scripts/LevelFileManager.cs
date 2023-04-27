@@ -23,7 +23,7 @@ public class LevelFileManager : MonoBehaviour
         //Save the current Scene to a json file Named after the current SceneName.
         //#TODO Ideally will only be called with user input name in Level Editor, Will need changed.
         // saveToFile(SceneManager.GetActiveScene().name);
-           loadFromFile("Phy");
+         loadFromFile("Physics lab");
         //Set Load to False
         //Loaded = false;
     }

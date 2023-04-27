@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2838753229
+CRC: 2874431185
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8dcf3a37c923926b5f6deaa3edc7310d
+    Hash: e541544857517defba5a56b0657f1399
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ae8750e4a761e8616a88db7e4835215b
+    Hash: 17f6a47852ee2d73dff3dd2e2a515363
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -30,6 +30,10 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
 - Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
 - AssemblyName: Unity.XR.Interaction.Toolkit
@@ -65,6 +69,7 @@ Assets:
 - Assets/school/props/book9.fbx
 - Assets/school/Prefabs/props/locker_4.prefab
 - Assets/school/Prefabs/props/book16.prefab
+- Assets/school/Prefabs/props/board1 Variant.prefab
 - Assets/school/Prefabs/props/book13.prefab
 - Assets/school/props/board2_2.fbx
 - Assets/school/props/showcase.fbx
@@ -75,6 +80,7 @@ Assets:
 - Assets/school/Prefabs/props/book15.prefab
 - Assets/school/Prefabs/props/sheet3.prefab
 - Assets/school/props/wall4.fbx
+- Assets/school/Prefabs/props/table4.prefab
 - Assets/school/props/wall2.fbx
 - Assets/school/road/doroga.fbx
 - Assets/school/Prefabs/props/board2_2 (1).prefab
@@ -106,11 +112,11 @@ Assets:
 - Assets/school/Prefabs/props/locker_2.prefab
 - Assets/school/Prefabs/props/book14.prefab
 - Assets/school/props/table2.fbx
-- Assets/school/props/book16.fbx
+- Assets/school/Prefabs/props/metaltray.prefab
 - Assets/school/props/book8.fbx
 - Assets/school/props/book7.fbx
 - Assets/school/props/locker_1.fbx
-- Assets/school/props/rack1.fbx
+- Assets/school/props/book16.fbx
 - Assets/school/Prefabs/props/button.prefab
 - Assets/school/props/book10.fbx
 - Assets/school/props/book14.fbx
@@ -129,16 +135,19 @@ Assets:
 - Assets/school/Prefabs/props/wall4.prefab
 - Assets/school/Prefabs/road/doroga - krest.prefab
 - Assets/school/props/board.fbx
+- Assets/school/Prefabs/props/table12.prefab
 - Assets/school/Prefabs/props/jalousie.prefab
-- Assets/school/props/book6.fbx
 - Assets/school/Prefabs/props/showcase.prefab
 - Assets/school/Prefabs/props/speaker.prefab
-- Assets/school/props/locker1.fbx
+- Assets/school/props/book6.fbx
 - Assets/school/Prefabs/props/locker1.prefab
+- Assets/school/props/rack1.fbx
+- Assets/school/props/locker1.fbx
 - Assets/school/Prefabs/props/book7.prefab
 - Assets/school/props/table3.fbx
 - Assets/school/props/sheet3.fbx
 - Assets/school/Prefabs/props/locker_3.prefab
+- Assets/school/Prefabs/props/FIU Alone.prefab
 - Assets/school/props/book.fbx
 - Assets/school/Prefabs/props/Floor2.prefab
 - Assets/school/Prefabs/props/projector.prefab
@@ -175,6 +184,7 @@ Assets:
 - Assets/school/props/book3.fbx
 - Assets/school/props/book5.fbx
 - Assets/school/props/computer1.fbx
+- Assets/school/Prefabs/props/whitewall5.prefab
 - Assets/school/Prefabs/props/wall2.prefab
 - Assets/school/props/book2.fbx
 - Assets/school/Prefabs/props/book11.prefab
@@ -184,6 +194,7 @@ Assets:
 - Assets/school/props/chair1.fbx
 - Assets/school/props/projector.fbx
 - Assets/school/Prefabs/props/Floor.prefab
+- Assets/school/Prefabs/props/whitewall4.prefab
 - Assets/school/Prefabs/props/board2_1 1.prefab
 - Assets/school/Prefabs/props/book8.prefab
 - Assets/school/props/table1.fbx
