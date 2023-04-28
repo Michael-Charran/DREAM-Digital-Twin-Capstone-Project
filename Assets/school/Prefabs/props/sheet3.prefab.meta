@@ -1,8 +1,7 @@
 fileFormatVersion: 2
 guid: 5f0122993f7c5324d972bf997e494ca3
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
   userData: 
-  assetBundleName: 
+  assetBundleName: roomassets/schoolassets
   assetBundleVariant: 

@@ -3,7 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags: [Right Hand, Left Hand, RoomObject]
   layers:
   - Default
   - TransparentFX

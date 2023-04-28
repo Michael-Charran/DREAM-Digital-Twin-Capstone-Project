@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
-{
+{/*
     public static LevelManager Instance;
 
     [SerializeField] private GameObject _loaderCanvas;
@@ -46,6 +46,7 @@ public class LevelManager : MonoBehaviour
     {
         _progressBar.fillAmount = Mathf.MoveTowards(_progressBar.fillAmount, _target, 3 * Time.deltaTime);
     }
+    */
 }
 
 
